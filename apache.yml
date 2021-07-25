@@ -1,7 +1,7 @@
 ---
 - hosts: webservers
   become: yes
-  sudo: yes
+  become_user: nshariff
   tasks:
     - name: Update Repository cache
       apt:
