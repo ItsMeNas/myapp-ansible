@@ -17,7 +17,7 @@
       enabled: true
   -  name: copy template
      template:
-      src: index.j2
+      src: index.html
       dest: /var/www/html
      notify:
      - restart httpd
