@@ -1,11 +1,9 @@
 ---
-- hosts: webservers
-  become: yes
-  become_user: nshariff
+- hosts: webserver
+  sudo: yes
   tasks:
-    - name: Update Repository cache
-      apt:
-        update_cache: yes
+    - name: Updates apt cache
+      action: apt update_cache=true
     - name: Install Apache
       apt:
         name: apache2
