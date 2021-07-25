@@ -2,12 +2,14 @@
 - hosts: webservers 
   become: yes
   become_user: nshariff
+  sudo: yes
   tasks:
     - name: Update Repository cache
       apt:
         force_apt_get: yes
         update_cache: yes
-        cache_valid_time: 3600        
+        action: apt update_cache=true
+        cache_valid_time: 3600
     - name: Install Apache
       apt:
         name: apache2
