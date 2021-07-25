@@ -17,4 +17,3 @@
         dest: /var/www/html/
       notify:
         - restart httd
-    ...
