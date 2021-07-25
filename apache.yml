@@ -26,3 +26,7 @@
       command: mv /usr/local/apache-tomcat-9.0.50 /usr/local/tomcat
     - name: Starting tomcat
       shell: nohup /usr/local/tomcat/bin/startup.sh &
+    - name: Copy war file to Tomcat Server
+      copy:
+        src: sample.war
+        dest: /usr/local/tomcat/webapps 
